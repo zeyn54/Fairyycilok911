@@ -728,6 +728,7 @@ Tersembunyi kelezatan yang mekar, merayap dalam setiap jengkalnya.
               <textarea
                 class="form-control"
                 name="Pesanan Anda"
+                id="pesanan"
                 rows="5"
                 placeholder="Pesanan Anda"
               ></textarea>
@@ -742,7 +743,7 @@ Tersembunyi kelezatan yang mekar, merayap dalam setiap jengkalnya.
               </div>
             </div>
             <div class="text-center">
-              <button onclick="window.open('https://wa.link/7g8aol')">Sent Massage</button>
+              <button onclick="sendWhatsapp()">Sent Massage</button>
             </div>
           <!-- </form>  -->
         </div>
@@ -1259,7 +1260,7 @@ Tersembunyi kelezatan yang mekar, merayap dalam setiap jengkalnya.
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">daffanazein</a>
+          Designed by <a href="https://linkedin.com/muhammadgimnastiar">daffanazein</a>
         </div>
       </div>
     </footer>
@@ -1281,6 +1282,19 @@ Tersembunyi kelezatan yang mekar, merayap dalam setiap jengkalnya.
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
 
+    <script type="text/javascript">
+      function sendWhatsapp(){
+        var nama = document.getElementById('name').value;
+        var alamat = document.getElementById('address').value;
+        var no_telp = document.getElementById('phone').value;
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        var people = document.getElementById('people').value;
+        var pesanan = document.getElementById('pesanan').value;
+
+        window.open('https://api.whatsapp.com/send?phone=628152136243&text=Selamat%20datang%20di%20CilokMercon.911%20%E2%80%94%20di%20mana%20setiap%20hidangan%20adalah%20petualangan%20rasa%20yang%20memikat.%20Kami%20sangat%20senang%20Anda%20memilih%20kami%20untuk%20menyajikan%20pengalaman%20kuliner%20Anda%20hari%20ini.%0ANama%3A%20' +nama+'%0AAlamat%3A%20'+alamat+'%0ANo%20Telp%3A%20'+no_telp+'%0APesanan%3A%20'+pesanan+'%0ATanggal%3A%20'+date+'%0AWaktu%3A%20'+time+'%0A%F0%9F%A5%B0')
+      }
+    </script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
